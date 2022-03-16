@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/SBWeinstein/Neotoma2021/blob/main/github_graphic-01.svg" width="20%">
+<img align="right" src="https://github.com/SBWeinstein/Neotoma_fungi/blob/main/github_graphic-01.svg" width="20%">
 
 # This respository contains code associated with "Wild herbivorous mammals (genus *Neotoma*) host a diverse but transient assemblage of fungi"
 
