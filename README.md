@@ -13,3 +13,5 @@
 **woodrat_ITS_diversity.R:** Calculates prevalence of fungal taxa and examines factors predicting fungal diversity, quantity and composition in wild rats. Script uses phyloseq formatted files produced by woodrat_qiime2R.R, precipation data from NOAA_precip_data.R, compiled data on the ecology of identified ITS amplicons, and wild woodrat diet data (from Weinstein et al 2021). Generates figures 2A, 3A.
  
 **Wild_cap_comps.R:** Script uses phyloseq formatted files produced by woodrat_qiime2R.R to examine ITS read counts and diversity in captive rats, with comparisons to wild individuals. Generates figures 4 and 5.
+
+**MRM_models.R:** Script uses rarefied phyloseq formatted files produced in woodrat_ITS_diversity.R to examine how host phylogeny, geography and diet contribute to mycobiome composition in wild individuals. Generates Figure 3b and Table 3.
