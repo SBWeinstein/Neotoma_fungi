@@ -6,7 +6,7 @@
 
 **Zac_scripts_here** sequence processing and taxonomy assignments? Amplicon sequences are available from the [NCBI sequence archive](https://www.ncbi.nlm.nih.gov/sra) under BioProject #####. Inputs are fastq.gz files. 
 
-**woodrat_qiime2R.R:** Convert qiime files from Zac_scripts to phyloseq format, add metadata, check Saccharomyces_cerevisiae positive controls and blanks, remove positive controls. 
+**woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata ("gnomex_metadata_ITS_trim.csv"), check positive controls and blanks, remove positive controls. 
 
 **Methods_comps_Fig1.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses ITS data from phyloseq outputs from woodrat_qiime2R.R, Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy summaries combined into phylo66_kraken_outputs.csv. Produces Figure 1.
 
