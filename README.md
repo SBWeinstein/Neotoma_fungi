@@ -8,7 +8,7 @@
 
 **woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata ("gnomex_metadata_ITS_trim.csv"), check positive controls and blanks, remove positive controls. 
 
-**Methods_comps_Fig1.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses ITS data from phyloseq outputs from woodrat_qiime2R.R, Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy summaries combined into phylo66_kraken_outputs.csv. Produces Figure 1.
+**Figure1_correlations.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses ITS data from phyloseq outputs from woodrat_qiime2R.R (physeq3.rds), Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy reports combined into kraken_bigDB_Conf0.05_outputs_30Mar22.csv. Produces Figure 1.
 
 **NOAA_precip_data.R:** Download precipitation data from NOAA 
 
