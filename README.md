@@ -8,6 +8,10 @@
 
 **woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata (gnomex_metadata_ITS_trim.csv), check positive controls and blanks. Removes positive controls to produce physeq3.rds, remove ASVs with <25 read counts and subset to wild samples to produce phyloseq_fungal_w25_27Dec21.rds used in subsequent analyses.
 
+**Shotgun_bash_commands.sh:** Shotgun metagenomic read processing including quality control, removing host reads, and classification using kraken2.
+
+**Kraken_outputs_to_R.R:** Creates csv file with proportion of reads assigned to fungi (and other groups) from kraken2 outputs. Produces kraken_bigDB_Conf0.05_outputs_30Mar22.csv.
+
 **Figure1_correlations.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses phyloseq formatted ITS amplicon data  from woodrat_qiime2R.R (physeq3.rds), Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy reports combined into kraken_bigDB_Conf0.05_outputs_30Mar22.csv. Produces Figure 1.
 
 **NOAA_precip_data.R:** Download precipitation data from NOAA 
