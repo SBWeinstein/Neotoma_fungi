@@ -16,8 +16,8 @@ setwd("<directory>")
 w25<-readRDS("phyloseq_fungal_w25_27Dec21.rds") # filtered, wild rat ITS data  from woodrat_qiime2R.R script
 Fun_eco<-read.csv("fungal_taxa_counts_25eco_wild_24May21.csv") #amplicon ecology data to get plant-associates
 precip<-read.csv("precip.by.site.csv") #precip data from NOAA, with site info added in excel
-plant<-readRDS( file = "C:/Users/Sara//Dropbox/phylosymbiosis/Sequence_analyses_Mar2020/16s_analyses/diet1percent_rar_29May20.rds") 
-FQ<-read.csv(file="C:/Users/Sara/Dropbox/mycobiome/FungiQuant_Results_wMetadata_All_13Dec21.csv") #fungiquant data
+plant<-readRDS( file = "diet1percent_rar_29May20.rds") 
+FQ<-read.csv(file="FungiQuant_Results_wMetadata_All_13Dec21.csv") #fungiquant data
 
 #############
 w25_sp<-tax_glom(w25, "Species", NArm=FALSE) # 551 "species"
