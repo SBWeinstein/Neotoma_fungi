@@ -6,13 +6,13 @@
 
 **Zac_scripts_here** sequence processing and taxonomy assignments? Amplicon sequences are available from the [NCBI sequence archive](https://www.ncbi.nlm.nih.gov/sra) under BioProject #####. Inputs are fastq.gz files. 
 
-**woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata ("gnomex_metadata_ITS_trim.csv"), check positive controls and blanks, remove positive controls. 
+**woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata ("gnomex_metadata_ITS_trim.csv"), check positive controls and blanks. Removes positive controls to produce physeq3.rds, remove ASVs with <25 read counts and subset to wild samples to produce phyloseq_fungal_w25_27Dec21.rds used in subsequent analyses.
 
-**Figure1_correlations.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses ITS data from phyloseq outputs from woodrat_qiime2R.R (physeq3.rds), Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy reports combined into kraken_bigDB_Conf0.05_outputs_30Mar22.csv. Produces Figure 1.
+**Figure1_correlations.R:** Compare the number of ITS reads, 18s copies per ng DNA, and percent of metagenomic reads assigned to fungi. Uses phyloseq formatted ITS amplicon data  from woodrat_qiime2R.R (physeq3.rds), Fungiquant results from FungiQuant_Results_wMetadata_All_13Dec21.csv, and kraken2 taxonomy reports combined into kraken_bigDB_Conf0.05_outputs_30Mar22.csv. Produces Figure 1.
 
 **NOAA_precip_data.R:** Download precipitation data from NOAA 
 
-**woodrat_ITS_diversity.R:** Calculates prevalence of fungal taxa and examines factors predicting fungal diversity, quantity and composition in wild rats. Script uses phyloseq formatted files produced by woodrat_qiime2R.R, precipitation data from NOAA_precip_data.R, compiled data on the ecology of identified ITS amplicons, and wild woodrat diet data (from Weinstein et al 2021). Generates figures 2A, 3A.
+**woodrat_ITS_diversity.R:** Calculates prevalence of fungal taxa and examines factors predicting fungal diversity, quantity and composition in wild rats. Script uses phyloseq formatted files produced by woodrat_qiime2R.R ("phyloseq_fungal_w25_27Dec21.rds"), precipitation data from NOAA_precip_data.R, compiled data on the ecology of identified ITS amplicons, Fungiquant results, and wild woodrat diet data (from Weinstein et al 2021). Generates figures 2A, 3A.
 
 **Ecology_ASVs_Reads.R** Uses compiled data on the ecology of all identified fungal ASVs to examine the distribution of ecological niches and trophic modes across reads and ASVs.  Produces figure 2B, 2C
  
