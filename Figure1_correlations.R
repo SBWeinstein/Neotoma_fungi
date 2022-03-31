@@ -10,7 +10,7 @@ library("cowplot")#to stack plots
 
 #files
 physeq3<-readRDS("physeq3.rds") #ITS data from woodrat_qiime2R.R
-FQ<-read.csv(file="C:/Users/Sara/Dropbox/mycobiome/FungiQuant_Results_wMetadata_All_13Dec21.csv")
+FQ<-read.csv(file="FungiQuant_Results_wMetadata_All_13Dec21.csv")
 SG<-read.csv(file="kraken_bigDB_Conf0.05_outputs_30Mar22.csv") #kraken outputs from big DB
 
 #filter
@@ -71,7 +71,7 @@ pdf("sequencing_ITS_SG_18s_30Mar22.pdf", width=4, height=6)
 plot_grid(P3,P2, P1, nrow=3, align = "v", labels = c('A', 'B', 'C'))
 dev.off()
 
-#using Kendall’s tau to measure correlations between 
+#using Kendallâ€™s tau to measure correlations between 
 #18s rRNA gene c/ng , number of ITS reads, and percent of shotgun reads assigned to fungi. 
 #df2 has outlier, df3 does not
 
