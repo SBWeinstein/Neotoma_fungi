@@ -6,7 +6,7 @@
 
 **[ITS_seq_preprocess](ITS_seq_preprocess)** Sequence processing to ASV tables and taxonomy calling. Uses QIIME2 framework with DADA2 for denoising and UNITE database for taxonomic calling. Amplicon sequences are available from the [NCBI sequence archive](https://www.ncbi.nlm.nih.gov/sra) under BioProject PRJNA824056. Inputs are paired fastq.gz files. 
 
-**woodrat_qiime2R.R:** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata (gnomex_metadata_ITS_trim.csv), check positive controls and blanks. Removes positive controls to produce physeq3.rds, remove ASVs with <25 read counts and subset to wild samples to produce phyloseq_fungal_w25_27Dec21.rds used in subsequent analyses.
+**[woodrat_qiime2R.R](woodrat_qiime2R.R):** Convert qiime outputs (table.qza, taxonomy.qza) to phyloseq format, add metadata (gnomex_metadata_ITS_trim.csv), check positive controls and blanks. Removes positive controls to produce physeq3.rds, remove ASVs with <25 read counts and subset to wild samples to produce phyloseq_fungal_w25_27Dec21.rds used in subsequent analyses.
 
 **Shotgun_bash_commands.sh:** Shotgun metagenomic read processing including quality control, removing host reads, and classification using kraken2.
 
