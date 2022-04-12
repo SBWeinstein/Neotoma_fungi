@@ -9,6 +9,8 @@ library(tidyverse)
 library("cowplot")#to stack plots
 library(MASS) #for regressions
 library(vegan) # for community comparisons
+library(emmeans) #pairwise comparisons
+library(multcomp) #pairwise comparisons, CLD
 
 setwd("<directory>")
 
@@ -142,7 +144,7 @@ anova(m2,m3)#compare between models
 anova(m4b, test='LRT') #model comparison for stats table
 summary(m4b)
 
-##for all fungal diversity: not rarefied Observed- sig site and species
+##for all fungal diversity: not rarefied Observed- sig site 
 m1 <- glm.nb(Observed~site+Rat_sp+precip+Obs.PF, data = complete_plants)
 m1.p <- glm.nb(Observed~Rat_sp+precip+Obs.PF, data = complete_plants) #colinearities between site and rainfall
 m2 <- glm.nb(Observed~site+Rat_sp+Obs.PF, data = complete_plants)
@@ -151,6 +153,10 @@ m3a <- glm.nb(Observed~site+Rat_sp, data = div_dat4)
 m4a <- glm.nb(Observed~site, data = div_dat4) #best
 
 anova(m4a) 
+
+#Which sites significantly differ? for Compact Letter Display, Figure 1A
+marginal = emmeans(m4a, ~ site)
+cld(marginal, Letters=letters)				 
 
 #shan.ITS.R (rarified) not count data, ranges 0-4, surprisingly normal distribution, good fit for lm, only site sig
 hist(div_dat4$shan.ITS.R)
